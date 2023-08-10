@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'jam_grotesqueregular';
+    src: url('./fonts/fontspring-demo-jamgrotesque-regular-webfont.woff2') format('woff2'),
+         url('./fonts/fontspring-demo-jamgrotesque-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'jam_grotesquelight';
+    src: url('./fonts/fontspring-demo-jamgrotesque-light-webfont.woff2') format('woff2'),
+         url('./fonts/fontspring-demo-jamgrotesque-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    min-height: 100vh;
+    display:grid;
+    grid-template-rows: 1fr 6fr;
+
+    font-family:'jam_grotesqueregular';
+}
+
+#site-nav{
+    display:flex;
+    justify-content: space-evenly;
+
+    position:relative;
+
+    font-family:'jam_grotesquelight'
+}
+
+#site-title{
+    
+    font-size:2rem;
+    text-align:center;
+
+    padding:25px;
+}
+
+#content{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+
+    padding:10px;
+}
+
+#sidebar{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-between;
+}
+
+#about-me-text{
+    display:grid;
+    grid-template-rows: repeat(autofit, 1fr);
+    gap:10px;
+    padding-right:100px;
+}
+
+.carousel{
+    max-width: 100%;
+}
+
+
+.carousel-wrapper {
+    width:0;
+    min-width:100%;
+
+    display:flex;
+    overflow:scroll;
+}
+
+img{
+    max-height:500px;
+}
+
+
+  
