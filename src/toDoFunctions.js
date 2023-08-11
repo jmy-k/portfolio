@@ -1,13 +1,14 @@
 import chbBRApril from "./assets/DNG-CHB-BR-April.jpg";
 import chbBRMay from "./assets/DNG-CHB-BR-May.jpg";
 import chbAFApril from "./assets/DNG-CHB-AF-April.jpeg";
-import chbArtnet1 from "./assets/DNG-CHB_artnet_300x250.jpg";
-import chbArtnet2 from "./assets/DNG-CHB_artnet_300x480.jpg";
-import chbArtnet3 from "./assets/DNG-CHB_artnet_300x600.jpg";
-import chbArtnet4 from "./assets/DNG-CHB_artnet_640x300.jpg";
-import chbArtnet5 from "./assets/DNG-CHB_artnet_970x250.jpg";
+import chbArtnet1 from "./assets/DNG-CHB-Artnet-ads1.jpeg";
+import chbArtnet2 from "./assets/DNG-CHB-Artnet-ads2.jpeg"
 
-const chakaiaItems = [chbBRApril, chbBRMay, chbAFApril, chbArtnet1, chbArtnet2,chbArtnet3,chbArtnet4,chbArtnet5];
+const chakaiaPosters = ["Chakaia Booker: Public Opinion",chbBRApril, chbBRMay, chbAFApril,];
+const chakaiaAds = ["Chakaia Booker: Public Opinion",chbArtnet1, chbArtnet2];
+
+const adInfo = [{title:"David Nolan Gallery", subtitle1: "print media", subtitle2:"web media"}]
+
 
 const aboutButton = document.querySelector('#about-button');
 const workButton = document.querySelector('#work-button');
@@ -34,6 +35,7 @@ export const domManipulator = (function(){
         const mainText = document.createElement('div');
         mainText.id="about-me-text";
 
+        // had to separate it like this in order for nice lineb breaks
         const para1 = document.createElement('div');
         para1.textContent="I was born and raised in Hong Kong, and am currently between home and New York City.";
         
@@ -48,43 +50,16 @@ export const domManipulator = (function(){
 
         mainText.append(para1,para2,para3,para4)
 
-        // social media links + email
-        const socialLinks = document.createElement('div');
-        socialLinks.id="socials-container"
-
-        const linkedInLink = document.createElement('a');
-        linkedInLink.href = "https://www.linkedin.com/in/julia-kan-683828173/";
-        linkedInLink.textContent="linkedin";
-        linkedInLink.setAttribute('target','_blank');
-        linkedInLink.setAttribute('rel','noreferrer noopener');
-        linkedInLink.className='socials';
-
-        const gitHubLink =document.createElement('a');
-        gitHubLink.href="https://github.com/jmy-k";
-        gitHubLink.textContent="github";
-        gitHubLink.setAttribute('target','_blank');
-        gitHubLink.setAttribute('rel','noreferrer noopener');
-        gitHubLink.className='socials';
-
-        const emailLink = document.createElement('a');
-        emailLink.href="mailto:myjuliakan@gmail.com";
-        emailLink.textContent="email";
-        emailLink.className='socials';
-
-        socialLinks.appendChild(linkedInLink);
-        socialLinks.appendChild(gitHubLink);
-        socialLinks.appendChild(emailLink);
-
         dashboard.appendChild(mainText);
-        dashboard.appendChild(socialLinks)
     }
 
-    function sidebarPopulate(){
+    function sidebarWork(){ //called when "work" is clicked
         const advertNav=document.createElement('div');
         advertNav.textContent="ads and posters";
         advertNav.className="sidebar-nav";
         advertNav.addEventListener('click',()=>{
-            adPageRender();
+            adContentRender(chakaiaPosters);
+            adContentRender(chakaiaAds);
         })
 
         const artworkNav = document.createElement('div');
@@ -101,19 +76,45 @@ export const domManipulator = (function(){
 
     }
 
-    function adPageRender(){
-        const chakaiaContainer = document.createElement('div');
-        chakaiaContainer.className="carousel";
+    function sidebarAbout(){
+        const linkedInLink = document.createElement('a');
+        linkedInLink.href = "https://www.linkedin.com/in/julia-kan-683828173/";
+        linkedInLink.textContent="linkedin";
+        linkedInLink.setAttribute('target','_blank'); 
+        linkedInLink.setAttribute('rel','noreferrer noopener'); // opens in new tab
+        linkedInLink.className='socials';
 
+        const gitHubLink =document.createElement('a');
+        gitHubLink.href="https://github.com/jmy-k";
+        gitHubLink.textContent="github";
+        gitHubLink.setAttribute('target','_blank');
+        gitHubLink.setAttribute('rel','noreferrer noopener');
+        gitHubLink.className='socials';
+
+        const emailLink = document.createElement('a');
+        emailLink.href="mailto:myjuliakan@gmail.com";
+        emailLink.textContent="email";
+        emailLink.className='socials';
+
+        sidebar.appendChild(linkedInLink);
+        sidebar.appendChild(gitHubLink);
+        sidebar.appendChild(emailLink);
+    }
+
+    function adContentRender(itemList){ //called when "ads and projects" is clicked
+        const carouselContainer = document.createElement('div');
+        carouselContainer.className="carousel";
+
+        //wrapper for the actual carousel for styling
         const carouselWrapper = document.createElement('div');
         carouselWrapper.className="carousel-wrapper";
 
-        for (let i=0;i<chakaiaItems.length;i++){
+        for (let i=0;i<itemList.length;i++){
             const carouselItem=document.createElement('div');
             carouselItem.className="carousel-item";
             const itemFigure = document.createElement('figure');
             const itemImage = document.createElement('img');
-            itemImage.src=chakaiaItems[i];
+            itemImage.src=itemList[i];
 
             itemFigure.appendChild(itemImage);
             carouselItem.appendChild(itemFigure);
@@ -121,18 +122,25 @@ export const domManipulator = (function(){
             carouselWrapper.appendChild(carouselItem);
         }
 
-        chakaiaContainer.appendChild(carouselWrapper);
+        carouselContainer.appendChild(carouselWrapper);
 
-        dashboard.appendChild(chakaiaContainer);
+        dashboard.appendChild(carouselContainer);
        
+    }
+
+    function projectInfo(name){
+        const projectTitle = document.createElement('div');
+        projectTitle.className="project-title";
+        projectTitle.textContent=adInfo[0].title;
     }
 
     return {
         emptyDashboard,
         emptySidebar,
         aboutPageRender,
-        sidebarPopulate,
-        adPageRender,
+        sidebarWork,
+        sidebarAbout,
+        adContentRender,
     }
 })();
 

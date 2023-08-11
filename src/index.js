@@ -9,11 +9,12 @@ aboutButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
     domManipulator.aboutPageRender();
     domManipulator.emptySidebar();
+    domManipulator.sidebarAbout();
 
 })
 
 workButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
     domManipulator.emptySidebar();
-    domManipulator.sidebarPopulate();
+    domManipulator.sidebarWork();
 })
