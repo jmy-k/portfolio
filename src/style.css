@@ -78,6 +78,7 @@ body{
 #content{
     display:grid;
     grid-template-columns: 1fr 5fr;
+    gap:50px;
 
     padding:10px;
 }
@@ -87,12 +88,11 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-content:space-between;
-    gap:10px;
+    gap:16px;
 }
 
 #dashboard{
     display:grid;
-    grid-template-columns: repeat(autofit,1fr);
     gap:10px;
 }
 
@@ -110,8 +110,9 @@ body{
 
 .carousel{
     max-width: 100%;
-}
 
+    padding-bottom: 30px;
+}
 
 .carousel-wrapper {
     width:0;
@@ -121,9 +122,39 @@ body{
     overflow:scroll;
 }
 
-img{
-    max-height:500px;
+.carousel-title{
+    font-family:'jam_grotesquelight_italic';
+    font-size:20px;
+    padding-left: 10px;
+    padding-top:20px;
 }
 
+.carousel-item{
+    display:flex;
+    flex-direction:column;
+}
 
-  
+figure{
+    margin-inline-end: 20px;
+    margin-inline-start: 20px;
+}
+
+img{
+    max-height:400px;
+}
+
+.item-name{
+    text-align: center;
+    font-family: 'jam_grotesqueextralight';
+}
+
+.project-title{
+    font-family: 'jam_grotesquemedium';
+    font-size:25px;
+}
+
+.project-intro{
+    font-size:16px;
+
+    padding-bottom: 30px;
+}

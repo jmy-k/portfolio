@@ -1,13 +1,18 @@
 import chbBRApril from "./assets/DNG-CHB-BR-April.jpg";
 import chbBRMay from "./assets/DNG-CHB-BR-May.jpg";
 import chbAFApril from "./assets/DNG-CHB-AF-April.jpeg";
-import chbArtnet1 from "./assets/DNG-CHB-Artnet-ads1.jpeg";
-import chbArtnet2 from "./assets/DNG-CHB-Artnet-ads2.jpeg"
+import chbArtnet from "./assets/DNG-CHB-Artnet-ads.jpeg";
+import chbBrochureSmall from "./assets/DNG-CHB-brochure.jpg";
 
-const chakaiaPosters = ["Chakaia Booker: Public Opinion",chbBRApril, chbBRMay, chbAFApril,];
-const chakaiaAds = ["Chakaia Booker: Public Opinion",chbArtnet1, chbArtnet2];
+import jvBRFeb from "./assets/DNG-JV-BR-Feb.jpg";
+import jvInvite from "./assets/DNG-JV-invite-full.jpg";
+import jvArtnet1 from "./assets/DNG-JV-Artnet-ad-full1.jpg";
+import jvArtnet2 from "./assets/DNG-JV-Artnet-ad-full2.jpg";
 
-const adInfo = [{title:"David Nolan Gallery", subtitle1: "print media", subtitle2:"web media"}]
+const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April Issue", content: chbBRApril}, {title: "The Brooklyn Rail, May Issue", content:chbBRMay}, {title:"Artforum, April Issue", content:chbAFApril},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
+const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February Issue", content:jvBRFeb},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
+
+const adInfo = [{title:"David Nolan Gallery", intro:"i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.\r\neach package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."}]
 
 
 const aboutButton = document.querySelector('#about-button');
@@ -43,10 +48,10 @@ export const domManipulator = (function(){
         para2.textContent="My love for art began in the early stages of life through drawing, painting, ceramics, and music. Ultimately this passion combined with my interest in cultural studies led me to earn a degree in Art History at New York University. During my time there, I also developed an interest in coding, for which I took an elective course.";
 
         const para3=document.createElement('div');
-        para3.textContent="I have worked for two galleries, one in Hong Kong, and one in New York, and an art advisory firm in New York. These experiences demonstrated to me a large technological gap in the current art world - platforms meant to connect artists to their audiences and websites intended to support institutions and galleries lack efficiency and usability. This led me to my current journey of web development and UX/UI design, where I am teaching myself HTML, CSS, and JavaScript. I created this site from scratch!"
+        para3.textContent="I have worked for two galleries, one in Hong Kong, and one in New York, and an art advisory firm in New York. These experiences demonstrated to me a large technological gap in the current art world; platforms meant to connect artists to their audiences and websites intended to support institutions and galleries lack efficiency and usability. This led me to my current journey of web development and UX UI design, where I am teaching myself HTML, CSS, and JavaScript. I created this site from scratch!"
 
         const para4=document.createElement('div');
-        para4.textContent="Though I have taken a seemingly drastic change, I genuinely believe in the positive potential of the ever-changing Internet in giving the much needed space and tools to artists and creatives. I want to support the community through artist-centered design.";
+        para4.textContent="Though I have taken a seemingly drastic change, I genuinely believe in the positive potential of the everchanging Internet in giving the much needed space and tools to artists and creatives. I want to support the community through artist centered design.";
 
         mainText.append(para1,para2,para3,para4)
 
@@ -58,8 +63,9 @@ export const domManipulator = (function(){
         advertNav.textContent="ads and posters";
         advertNav.className="sidebar-nav";
         advertNav.addEventListener('click',()=>{
+            projectInfo(adInfo);
             adContentRender(chakaiaPosters);
-            adContentRender(chakaiaAds);
+            adContentRender(jorindePosters);
         })
 
         const artworkNav = document.createElement('div');
@@ -109,15 +115,25 @@ export const domManipulator = (function(){
         const carouselWrapper = document.createElement('div');
         carouselWrapper.className="carousel-wrapper";
 
-        for (let i=0;i<itemList.length;i++){
+        const carouselTitle=document.createElement('div');
+        carouselTitle.className="carousel-title";
+        carouselTitle.textContent=itemList[0];
+        carouselContainer.appendChild(carouselTitle);
+
+        for (let i=1;i<itemList.length;i++){
             const carouselItem=document.createElement('div');
             carouselItem.className="carousel-item";
             const itemFigure = document.createElement('figure');
             const itemImage = document.createElement('img');
-            itemImage.src=itemList[i];
+            itemImage.src=itemList[i].content;
+
+            const itemName = document.createElement('div');
+            itemName.className="item-name";
+            itemName.textContent=itemList[i].title;
 
             itemFigure.appendChild(itemImage);
             carouselItem.appendChild(itemFigure);
+            carouselItem.appendChild(itemName);
 
             carouselWrapper.appendChild(carouselItem);
         }
@@ -132,6 +148,12 @@ export const domManipulator = (function(){
         const projectTitle = document.createElement('div');
         projectTitle.className="project-title";
         projectTitle.textContent=adInfo[0].title;
+
+        const projectIntro = document.createElement('div');
+        projectIntro.className="project-intro";
+        projectIntro.textContent=adInfo[0].intro;
+
+        dashboard.append(projectTitle,projectIntro)
     }
 
     return {
@@ -141,6 +163,7 @@ export const domManipulator = (function(){
         sidebarWork,
         sidebarAbout,
         adContentRender,
+        projectInfo
     }
 })();
 
