@@ -20,6 +20,8 @@ import sinsin3 from "./assets/SINSIN_breathe_3.jpeg";
 import sinsin4 from "./assets/SINSIN_breathe_4.jpeg";
 import sinsin5 from "./assets/SINSIN_breathe_5.jpeg";
 
+import testing from "./assets/sometext.txt";
+
 const adInfo = [{title:"David Nolan Gallery", subtitle:"", intro:"i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.\r\neach package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."}]
 const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April Issue", content: chbBRApril}, {title: "The Brooklyn Rail, May Issue", content:chbBRMay}, {title:"Artforum, April Issue", content:chbAFApril},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
 const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February Issue", content:jvBRFeb},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
@@ -92,6 +94,7 @@ export const domManipulator = (function(){
         projectNav.addEventListener('click',()=>{
             emptyDashboard();
             projectInfo(setiantoInfo);
+            readText("./assets/sometext.txt");
             carouselContentRender(setiantoProcess);
             carouselContentRender(setiantoPhotos)
         })
@@ -180,6 +183,23 @@ export const domManipulator = (function(){
         dashboard.append(projectTitle, projectSubtitle, projectIntro)
     }
 
+    function readText(name) {
+        const printText = document.createElement('div');
+        printText.className = "info-text";
+        
+        fetch(name)
+          .then(response => response.text())
+          .then(fileContent => {
+            printText.textContent = fileContent;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        
+        dashboard.append(printText);
+    }
+      
+
     return {
         emptyDashboard,
         emptySidebar,
@@ -187,7 +207,8 @@ export const domManipulator = (function(){
         sidebarWork,
         sidebarAbout,
         carouselContentRender,
-        projectInfo
+        projectInfo,
+        readText
     }
 })();
 
