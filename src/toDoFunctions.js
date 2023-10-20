@@ -94,7 +94,7 @@ export const domManipulator = (function(){
         projectNav.addEventListener('click',()=>{
             emptyDashboard();
             projectInfo(setiantoInfo);
-            readText("./assets/sometext.txt");
+            readText("./sometext.txt");
             carouselContentRender(setiantoProcess);
             carouselContentRender(setiantoPhotos)
         })
