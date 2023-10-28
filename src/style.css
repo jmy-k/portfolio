@@ -235,7 +235,19 @@ img{
     font-weight:100;
 }
 
-.project-title{
+.item-info{
+    display:none;
+
+    position:absolute;
+
+    max-width: 30vw;
+
+    background:#80808050;
+
+    font-size:12px;
+}
+
+.project-title, .project-click{
     font-weight:normal;
     font-size:25px;
 }
@@ -249,5 +261,5 @@ img{
 .project-intro{
     font-size:12px;
 
-    padding-bottom: 30px;
+    
 }
