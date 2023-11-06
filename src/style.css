@@ -258,8 +258,53 @@ img{
     font-size: 20px;
 }
 
-.project-intro{
-    font-size:12px;
+.project-click{
+    min-height:64.75px;
+}
 
-    
+.project-intro, .section-paragraph, .list-item{
+    font-size:12px;    
+}
+
+#project-info{
+    display: grid;
+    grid-template-columns:50% 50%;
+
+    gap:20px;
+
+    padding-top:30px;
+    padding-right:40px;
+}
+
+.section-title{
+    display:flex;
+    align-items: center;
+}
+
+.section-title.Background{
+    grid-column:1/2;
+    grid-row:1/2;
+}
+
+.section-paragraph.Background{
+    grid-column:1/2;
+    grid-row:2/3;
+}
+
+.Problem{
+    grid-column:2/3;
+    grid-row:1/2;
+}
+
+.section-paragraph.Problem{
+    grid-column:2/3;
+    grid-row:2/3;
+}
+
+.Research, .Personas, .Ideation{
+    grid-column: 1/3
+}
+
+ul {
+    grid-column:1/3
 }

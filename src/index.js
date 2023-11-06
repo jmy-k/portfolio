@@ -17,4 +17,5 @@ workButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
     domManipulator.emptySidebar();
     domManipulator.sidebarWork();
+    domManipulator.workPageRender();
 })

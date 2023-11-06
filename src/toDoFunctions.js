@@ -16,21 +16,33 @@ import sinsinProcess4 from "./assets/SINSIN_process_4.jpg";
 
 import sinsin1 from "./assets/SINSIN_breathe_1.jpeg";
 import sinsin2 from "./assets/SINSIN_breathe_2.jpeg";
-import sinsin3 from "./assets/SINSIN_breathe_3.jpeg";
 import sinsin4 from "./assets/SINSIN_breathe_4.jpeg";
 import sinsin5 from "./assets/SINSIN_breathe_5.jpeg";
 
 
+import flowchart from "./assets/artsy_flowchart.jpg";
+import hmw1 from "./assets/artsy hmw 1.jpg";
+import hmw2 from "./assets/artsy hmw 2.jpg";
+import hmw3 from "./assets/artsy hmw 3.jpg";
+import hmw4 from "./assets/artsy hmw 4.jpg";
 
-const adInfo = [{title:"David Nolan Gallery", subtitle:"", intro:"i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", para2: "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."}]
+
+const adInfo = [{title:"David Nolan Gallery", subtitle:""}, ["i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."]]
 const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April Issue", content: chbBRApril}, {title: "The Brooklyn Rail, May Issue", content:chbBRMay}, {title:"Artforum, April Issue", content:chbAFApril},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
 const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February Issue", content:jvBRFeb},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
 
-const setiantoInfo=[{title:"Sin Sin Fine Art", subtitle:"Breathe - installation for Dwi Setianto", intro:"i was tasked with designing and constructing an installation space to display two of our artist’s digital video works. the decision to include the two works were made last-minute, with only a week left before the exhibition opening. for this installation, we had to confront several obstacles: short time-frame, limited budget, and no gallery space. most of the gallery space was already occupied with other artworks with no way of rearranging that would allow for two additional works to be projected on the walls. i decided to use the gallery’s storage space instead, and to create an immersive installation that would match the subject and theme of the works.", para2:" Dwi Setianto’s videos, like his body of work, are grounded in his connection with nature and the utilization of found materials. the first video is of leaves he collected while working as a park cleaner, blowing in a perpetual wind. the second is a compilation of water puddles, and its reflection of leaves, birds, and other subjects in motion.",para3:"i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."}]
+const setiantoInfo=[{title:"Sin Sin Fine Art", subtitle:"Breathe - installation for Dwi Setianto"}, ["i was tasked with designing and constructing an installation space to display two of our artist’s digital video works. the decision to include the two works were made last-minute, with only a week left before the exhibition opening. for this installation, we had to confront several obstacles: short time-frame, limited budget, and no gallery space. most of the gallery space was already occupied with other artworks with no way of rearranging that would allow for two additional works to be projected on the walls. i decided to use the gallery’s storage space instead, and to create an immersive installation that would match the subject and theme of the works.", " Dwi Setianto’s videos, like his body of work, are grounded in his connection with nature and the utilization of found materials. the first video is of leaves he collected while working as a park cleaner, blowing in a perpetual wind. the second is a compilation of water puddles, and its reflection of leaves, birds, and other subjects in motion.", "i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."]]
 const setiantoProcess=["",{title:"rough sketch floorplan", content:sinsinProcess1, info:"unfortunately, the gallery lacked a floor plan with measurements of the space, and given the irregular shape of the shelving and various furniture and objects placed in storage, it was difficult to take accurate measurements of the space."},{title:"doorway sketch", content:sinsinProcess2, info:"the fabric had to be seamless from floor to ceiling to look more like a tunnel. i also wanted it to pool at the bottom rather than be completely taut. with the doorway as a guide, i also accounted for excess fabric for the effect."},{title:"fabric sketch",content:sinsinProcess3, info:" after drawing a rough sketch of the space, i determined that two bolts of canvas were needed from which 17 pieces, each 7 meters long, were cut. these pieces were sewn together lengthwise. the crosses here mark where the jute was sewn onto the fabric."},{title:"brainstorm",content:sinsinProcess4, info:"this installation required fabric that was thick enough to be opaque, but light enough to be hung securely. I decided on plain canvas to be hung up with jute strings. not only did canvas satisfy the requirements, but its coarse nature and wide fibers worked to invite touch.", para3:"i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."}]
-const setiantoPhotos=["",{title:"",content:sinsin1},{title:"",content:sinsin2},{title:"",content:sinsin3},{title:"",content:sinsin4},{title:"",content:sinsin5}]
+const setiantoPhotos=["Breathe - exhibition opening",{title:"",content:sinsin1},{title:"",content:sinsin2},{title:"",content:sinsin4},{title:"",content:sinsin5}]
 
-const artsyInfo=[{title:"Artsy mobile app - case study", subtitle:"personal project - adding new features to the app", intro:"Artsy is a platform for discovering and buying art from galleries and auctions. While working at David Nolan Gallery, a gallery client of the site, I spent a lot of time using the website on both desktop and mobile. I used the site to update our gallery page with artworks and exhibition information, and research other works as well. My colleagues and I were constantly frustrated by the disorganization of the website and the difficulty in finding the information that we needed. I wanted to research and prototype some new features for Artsy's mobile app in order to find ways to create a more efficient and enjoyable experience for users."}]
+const artsyInfo=[{title:"Artsy mobile app - case study", subtitle:"personal project - adding new features to the app"},[]]
+const artsyBackground = ["Background","Artsy is a platform for discovering and buying art from galleries and auctions. While working at David Nolan Gallery, a gallery client of the site, I spent a lot of time using the website on both desktop and mobile. The site was our main mode of connecting with interested buyers who were not able to visit the gallery in person."];
+const artsyProblem = ["Problem","Colleagues, clients, and I had difficulty in finding information due to being overwhelmed by the disorganization of and amount of information on the website. I wanted to research and prototype some new features for Artsy's mobile app in order to find ways to create a more efficient and enjoyable experience for users."];
+const artsyResearch=["Research","A variety of research methods were used to determine user perception of Artsy and what needs are not being met. Initial survey served as a screening before more in-depth interviews and usability testing. I determined their age, occupation, use of Artsy, interest in art, and budget. I found that most users were professionals in the industry, young art enthusiasts, and mid-aged buyers of art.","After conducting the survey, I reached out to existing users of Artsy for one-on-one interviews. The interview was immediately followed by a usability test, with a few follow-up questions after. The usability test was not moderated; users were given a list of tasks and were not guided in any way to complete tasks. Here is what I learned:"]
+const artsyPersona = ["Personas","From these findings I designed two user personas."]
+const artsyIdea=["Ideation","Through affinity mapping, I summarized research findings and found main pain points for which I generated solutions by answering a few “How Might We” questions. I then completed a series of rapid-fire ideation, generating at least 10 solutions for each question. I converged these ideas so that they tackled each pain point I found."]
+const artsyFindings = ["","Most common uses of Artsy were to discover artworks and purchase artworks by artists already owned by the buyer.","Users enjoyed the process of discovery of new artwork and artists, and wanted to feel comfortable in their knowledge of the artist whose work they are buying.","Younger art enthusiasts were mostly deterred by the pricing and found it difficult to look for cheaper works.","Art collectors and buyers of art liked keeping track of artists whose work they already owned or have “followed” on the site, but found it difficult to do so on the app.","All users preferred to see artworks in person before purchasing."];
+const artsyHMW=["",{content:hmw1},{content:hmw2},{content:hmw3},{content:hmw4}]
 
 const aboutButton = document.querySelector('#about-button');
 const workButton = document.querySelector('#work-button');
@@ -40,6 +52,7 @@ const sidebar = document.querySelector('#sidebar');
 /// dom manipulator
 
 export const domManipulator = (function(){
+
     function emptyDashboard(){
         while (dashboard.children.length>0){
             dashboard.children[0].remove();
@@ -75,7 +88,13 @@ export const domManipulator = (function(){
         dashboard.appendChild(mainText);
     }
 
-    function sidebarWork(){ //called when "work" is clicked
+    function workPageRender(){
+        carouselContentRender(chakaiaPosters);
+        carouselContentRender(jorindePosters);
+        carouselContentRender(setiantoPhotos);
+    }
+
+    function sidebarWork(){ //renders sidebar when "work" is clicked
         const advertNav=document.createElement('div');
         advertNav.textContent="ads and posters";
         advertNav.className="sidebar-nav";
@@ -198,7 +217,17 @@ export const domManipulator = (function(){
 
         carouselContainer.appendChild(carouselWrapper);
 
-        dashboard.appendChild(carouselContainer);
+        const dashboardDivs = dashboard.querySelectorAll('div');
+
+        for (let y=0;y<dashboardDivs.length;y++){
+            if(dashboardDivs[y].id === "#project-info"){
+                dashboardDivs[y].append(carouselContainer);
+            }
+            else{
+                dashboard.append(carouselContainer);
+                
+            }
+        }
        
     }
 
@@ -211,19 +240,14 @@ export const domManipulator = (function(){
         projectSubtitle.className="project-subtitle";
         projectSubtitle.textContent=name[0].subtitle;
 
-        const projectIntro = document.createElement('div');
-        projectIntro.className="project-intro";
-        projectIntro.textContent=name[0].intro;
+        dashboard.append(projectTitle, projectSubtitle)
 
-        const para2 = document.createElement('div');
-        para2.className="project-intro";
-        para2.textContent=name[0].para2;
-        
-        const para3 = document.createElement('div');
-        para3.className="project-intro";
-        para3.textContent=name[0].para3;
-
-        dashboard.append(projectTitle, projectSubtitle, projectIntro, para2, para3)
+        for (let i=0;i<name[1].length;i++){
+            const projectIntro = document.createElement('div');
+            projectIntro.className="project-intro";
+            projectIntro.textContent=name[1][i];
+            dashboard.append(projectIntro)
+        }
     }
 
     function openSinSin(){
@@ -258,24 +282,92 @@ export const domManipulator = (function(){
         dashboard.append(sinsinTitle);
         
         projectInfo(artsyInfo);
+
+        const infoContainer = document.createElement('div');
+        infoContainer.id="project-info";
+        dashboard.append(infoContainer);
+
+        sectionRender(artsyBackground);
+        sectionRender(artsyProblem);
+
+        sectionRender(artsyResearch);
+        listRender(artsyFindings);
+        sectionRender(artsyPersona);
+
+        sectionRender(artsyIdea);
+        carouselContentRender(artsyHMW);
+        imageRender(flowchart);
         
         const projectTitle = document.querySelector('.project-title');
         projectTitle.addEventListener('click',()=>{
             projectPage();
         })
     }
-      
+
+    
+
+    function imageRender(imageName){
+        const infoContainer = dashboard.querySelector('#project-info');
+
+        const itemFigure = document.createElement('figure'); //image wrapper for easier resizing
+        const itemImage = document.createElement('img');
+        itemImage.src=imageName;
+        
+        itemFigure.append(itemImage);
+        infoContainer.append(itemFigure);
+    }
+
+    function sectionRender(sectionName){
+        const infoContainer = dashboard.querySelector('#project-info');
+
+        const sectionTitle = document.createElement('div');
+        sectionTitle.className="section-title";
+        sectionTitle.textContent=sectionName[0];
+        sectionTitle.classList.add(sectionName[0]);
+
+        infoContainer.append(sectionTitle);
+
+        for(let i=1; i<sectionName.length; i++){
+            const sectionPara=document.createElement('div');
+            sectionPara.className="section-paragraph";
+            sectionPara.textContent=sectionName[i];
+            sectionPara.classList.add(sectionName[0]);
+
+            infoContainer.append(sectionPara);
+        }
+    }
+    
+    function listRender(listName){
+        const infoContainer = dashboard.querySelector('#project-info');
+
+        const listTitle = document.createElement('ul');
+        listTitle.className="list-title";
+        listTitle.textContent=listName[0];
+
+        for (let i = 1;i<listName.length;i++){
+            const listItem = document.createElement('li');
+            listItem.className="list-item";
+            listItem.textContent=listName[i];
+            listTitle.appendChild(listItem);
+        }
+
+        infoContainer.append(listTitle);
+    }
 
     return {
         emptyDashboard,
         emptySidebar,
         aboutPageRender,
+        workPageRender,
         sidebarWork,
         projectPage,
         sidebarAbout,
         carouselContentRender,
         projectInfo,
-        openSinSin
+        openSinSin,
+        openArtsy,
+        sectionRender,
+        listRender
     }
 })();
 
