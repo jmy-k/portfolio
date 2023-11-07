@@ -19,7 +19,8 @@ import sinsin2 from "./assets/SINSIN_breathe_2.jpeg";
 import sinsin4 from "./assets/SINSIN_breathe_4.jpeg";
 import sinsin5 from "./assets/SINSIN_breathe_5.jpeg";
 
-
+import persona1 from "./assets/artsy persona 1.jpg";
+import persona2 from "./assets/artsy persona 2.jpg"
 import flowchart from "./assets/artsy_flowchart.jpg";
 import hmw1 from "./assets/artsy hmw 1.jpg";
 import hmw2 from "./assets/artsy hmw 2.jpg";
@@ -39,7 +40,8 @@ const artsyInfo=[{title:"Artsy mobile app - case study", subtitle:"personal proj
 const artsyBackground = ["Background","Artsy is a platform for discovering and buying art from galleries and auctions. While working at David Nolan Gallery, a gallery client of the site, I spent a lot of time using the website on both desktop and mobile. The site was our main mode of connecting with interested buyers who were not able to visit the gallery in person."];
 const artsyProblem = ["Problem","Colleagues, clients, and I had difficulty in finding information due to being overwhelmed by the disorganization of and amount of information on the website. I wanted to research and prototype some new features for Artsy's mobile app in order to find ways to create a more efficient and enjoyable experience for users."];
 const artsyResearch=["Research","A variety of research methods were used to determine user perception of Artsy and what needs are not being met. Initial survey served as a screening before more in-depth interviews and usability testing. I determined their age, occupation, use of Artsy, interest in art, and budget. I found that most users were professionals in the industry, young art enthusiasts, and mid-aged buyers of art.","After conducting the survey, I reached out to existing users of Artsy for one-on-one interviews. The interview was immediately followed by a usability test, with a few follow-up questions after. The usability test was not moderated; users were given a list of tasks and were not guided in any way to complete tasks. Here is what I learned:"]
-const artsyPersona = ["Personas","From these findings I designed two user personas."]
+const artsyPersona = ["Personas","From these findings I designed two user personas to help me empathize with the end user in the remaining steps of the process."]
+const artsyUsers = ["",{content:persona1},{content:persona2}]
 const artsyIdea=["Ideation","Through affinity mapping, I summarized research findings and found main pain points for which I generated solutions by answering a few “How Might We” questions. I then completed a series of rapid-fire ideation, generating at least 10 solutions for each question. I converged these ideas so that they tackled each pain point I found."]
 const artsyFindings = ["","Most common uses of Artsy were to discover artworks and purchase artworks by artists already owned by the buyer.","Users enjoyed the process of discovery of new artwork and artists, and wanted to feel comfortable in their knowledge of the artist whose work they are buying.","Younger art enthusiasts were mostly deterred by the pricing and found it difficult to look for cheaper works.","Art collectors and buyers of art liked keeping track of artists whose work they already owned or have “followed” on the site, but found it difficult to do so on the app.","All users preferred to see artworks in person before purchasing."];
 const artsyHMW=["",{content:hmw1},{content:hmw2},{content:hmw3},{content:hmw4}]
@@ -175,7 +177,9 @@ export const domManipulator = (function(){
         const carouselTitle=document.createElement('div');
         carouselTitle.className="carousel-title";
         carouselTitle.textContent=itemList[0];
-        carouselContainer.appendChild(carouselTitle);
+        if (carouselTitle.textContent==! ""){
+            carouselContainer.appendChild(carouselTitle);
+        }
 
         for (let i=1;i<itemList.length;i++){
             const carouselItem=document.createElement('div');
@@ -218,14 +222,16 @@ export const domManipulator = (function(){
         carouselContainer.appendChild(carouselWrapper);
 
         const dashboardDivs = dashboard.querySelectorAll('div');
+        console.log(dashboardDivs)
 
-        for (let y=0;y<dashboardDivs.length;y++){
-            if(dashboardDivs[y].id === "#project-info"){
-                dashboardDivs[y].append(carouselContainer);
+        for (let j=0;j<dashboardDivs.length;j++){
+            let idName = dashboardDivs[j].id;
+            if(idName ==! "project-info"){
+                dashboard.append(carouselContainer);
             }
             else{
-                dashboard.append(carouselContainer);
-                
+                dashboardDivs[j].appendChild(carouselContainer)
+                break
             }
         }
        
@@ -293,6 +299,7 @@ export const domManipulator = (function(){
         sectionRender(artsyResearch);
         listRender(artsyFindings);
         sectionRender(artsyPersona);
+        carouselContentRender(artsyUsers);
 
         sectionRender(artsyIdea);
         carouselContentRender(artsyHMW);

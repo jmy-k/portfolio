@@ -308,3 +308,20 @@ img{
 ul {
     grid-column:1/3
 }
+
+#project-info .carousel{
+    grid-column:1/3;
+    padding:0;
+}
+
+#project-info .carousel .carousel-wrapper .carousel-item figure img{
+    max-height:200px;
+}
+
+#project-info figure{
+    grid-row: 13/14;
+}
+
+#project-info figure img {
+    max-height:400px;
+}
