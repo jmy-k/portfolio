@@ -124,6 +124,9 @@
     font-display: swap;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
+
+
 body{
     min-height: 100vh;
     display:grid;
@@ -132,6 +135,7 @@ body{
     gap:8px;
 
     font-family:'Roboto Mono';
+    cursor:crosshair;
 }
 
 #site-nav{
@@ -154,6 +158,8 @@ body{
     border-bottom:1px white solid;
     background-color: black;
     color:white;
+
+    overflow: scroll;
 }
 
 #title{
@@ -162,8 +168,6 @@ body{
 
     min-width:200px;
 }
-
-
 
 
 #sidebar{
@@ -181,11 +185,31 @@ body{
 
     max-width:56px;
     padding-top:16px;
-    margin-bottom:0px;
+}
+
+.sidebar-nav{
+    margin:0
 }
 
 .sidebar-nav:hover{
     color:purple;
+    cursor:pointer;
+}
+
+.divider{
+    display:flex;
+    align-self:baseline;
+    min-width:15px;
+    min-height:15px;
+    margin:0;
+    padding-left:5px;
+}
+
+.divider .circle{
+    min-height:15px;
+    min-width:15px;
+    border-radius: 50%;
+    background-color: black;
 }
 
 .header-nav{
@@ -201,6 +225,7 @@ body{
 .header-nav:hover{
     background-color: lightgray;
     color:black;
+    cursor:pointer;
 }
 
 .header-nav.selected{
@@ -236,7 +261,6 @@ body{
 
 .carousel{
     max-width: 100%;
-
     padding-bottom: 30px;
 }
 
@@ -290,20 +314,20 @@ img{
 .project-title-container{
     display:flex;
     gap:10px;
-
-    align-items:center;
 }
 
 .project-title-container figure{
     display:flex;
-    align-items:center;
+    align-self:flex-start;
     min-width:20px;
     min-height:20px;
+
+    padding-top:8px;
+    margin:0;
 }
 
 .project-title, .project-click{
     display:flex;
-    align-items: center;
 
     font-weight:normal;
     font-size:25px;

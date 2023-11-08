@@ -28,6 +28,7 @@ import hmw3 from "./assets/artsy hmw 3.jpg";
 import hmw4 from "./assets/artsy hmw 4.jpg";
 
 import circleFilled from "./assets/circle.svg";
+import circleUnfilled from "./assets/circle-outline.svg";
 
 
 const adInfo = [{title:"David Nolan Gallery", subtitle:""}, ["i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."]]
@@ -71,18 +72,12 @@ export const domManipulator = (function(){
 
         // had to separate it like this in order for nice lineb breaks
         const para1 = document.createElement('div');
-        para1.textContent="I was born and raised in Hong Kong, and am currently between home and New York City.";
+        para1.textContent="i was born and raised in Hong Kong, and am currently between home and New York City.";
         
         const para2 = document.createElement('div');
-        para2.textContent="My love for art began in the early stages of life through drawing, painting, ceramics, and music. Ultimately this passion combined with my interest in cultural studies led me to earn a degree in Art History at New York University. During my time there, I also developed an interest in coding, for which I took an elective course.";
+        para2.textContent="click 'code' on the side to see my code for this website!"
 
-        const para3=document.createElement('div');
-        para3.textContent="I have worked for two galleries, one in Hong Kong, and one in New York, and an art advisory firm in New York. These experiences demonstrated to me a large technological gap in the current art world; platforms meant to connect artists to their audiences and websites intended to support institutions and galleries lack efficiency and usability. This led me to my current journey of web development and UX UI design, where I am teaching myself HTML, CSS, and JavaScript. I created this site from scratch!"
-
-        const para4=document.createElement('div');
-        para4.textContent="Though I have taken a seemingly drastic change, I genuinely believe in the positive potential of the ever-changing Internet in giving the much needed space and tools to artists and creatives. The ways in which one can easily discover, access, and learn about art currently are limited and mundane, reflecting the contemporary art world’s rapid cookie-cutter commercialization. There is little space to demonstrate what makes an artist unique, only space for what makes an artist sell. Art is essential and so are the people who create it, so I want to support them through design that centers artists.";
-
-        mainText.append(para1,para2,para3,para4)
+        mainText.append(para1,para2);
 
         dashboard.appendChild(mainText);
     }
@@ -97,6 +92,28 @@ export const domManipulator = (function(){
         projectInfo(adInfo);
         carouselContentRender(chakaiaPosters);
         carouselContentRender(jorindePosters);
+
+        const dngTitleContainer = document.querySelector('.project-title-container');
+
+        dngTitleContainer.addEventListener('click',()=>{
+            dngTitleContainer.classList.toggle('closed');
+            if (dngTitleContainer.classList.contains('closed')){
+                dngClosedRender();
+            }  
+            else{
+                dngOpenRender();
+            }
+        })
+    }
+
+    function dngClosedRender(){
+        const dngTitleContainer = document.querySelector('.project-title-container');
+        emptyDashboard();
+        dashboard.append(dngTitleContainer)
+
+    }
+    function dngOpenRender(){
+        adPageRender();
     }
 
     function projectPage(){
@@ -114,6 +131,12 @@ export const domManipulator = (function(){
         sinsinTitle.addEventListener('click',()=>{
             openSinSin()
         });
+        sinsinTitleContainer.addEventListener('mouseover',()=>{
+            circleIcon.src=circleUnfilled;
+        })
+        sinsinTitleContainer.addEventListener('mouseout',()=>{
+            circleIcon.src=circleFilled;
+        })
         sinsinTitleContainer.appendChild(sinsinTitle);
         sinsinTitleContainer.appendChild(circleIconWrapper);
 
@@ -133,6 +156,12 @@ export const domManipulator = (function(){
         });
         artsyTitleContainer.appendChild(artsyTitle);
         artsyTitleContainer.appendChild(circleIconWrapper2);
+        artsyTitleContainer.addEventListener('mouseover',()=>{
+            circleIcon2.src=circleUnfilled;
+        })
+        artsyTitleContainer.addEventListener('mouseout',()=>{
+            circleIcon2.src=circleFilled;
+        })
 
         dashboard.append(sinsinTitleContainer,artsyTitleContainer);
 }
@@ -193,7 +222,6 @@ export const domManipulator = (function(){
         carouselContainer.appendChild(carouselWrapper);
 
         const dashboardDivs = dashboard.querySelectorAll('div');
-        console.log(dashboardDivs)
 
         for (let j=0;j<dashboardDivs.length;j++){
             let idName = dashboardDivs[j].id;
@@ -209,15 +237,30 @@ export const domManipulator = (function(){
     }
 
     function projectInfo(name){
+        const projectTitleContainer = document.createElement('div');
+        projectTitleContainer.className="project-title-container";
         const projectTitle = document.createElement('div');
         projectTitle.className="project-title";
         projectTitle.textContent=name[0].title;
+        
+        const circleIcon = document.createElement('img');
+        circleIcon.src=circleUnfilled;
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.append(circleIcon);
+
+        projectTitleContainer.append(projectTitle,circleIconWrapper)
+        projectTitleContainer.addEventListener('mouseover',()=>{
+            circleIcon.src=circleFilled;
+        })
+        projectTitleContainer.addEventListener('mouseout',()=>{
+            circleIcon.src=circleUnfilled;
+        })
 
         const projectSubtitle=document.createElement('div');
         projectSubtitle.className="project-subtitle";
         projectSubtitle.textContent=name[0].subtitle;
 
-        dashboard.append(projectTitle, projectSubtitle)
+        dashboard.append(projectTitleContainer, projectSubtitle)
 
         for (let i=0;i<name[1].length;i++){
             const projectIntro = document.createElement('div');
@@ -233,13 +276,29 @@ export const domManipulator = (function(){
         carouselContentRender(setiantoProcess);
         carouselContentRender(setiantoPhotos);
 
+        const setiantoSubtitle = document.querySelector('.project-subtitle');
+
+        let circleIcon2 = document.createElement('img');
+        circleIcon2.src=circleFilled;
+        const circleIconWrapper2 = document.createElement('figure');
+        circleIconWrapper2.append(circleIcon2);
+        const artsyTitleContainer=document.createElement('div');
+        artsyTitleContainer.className="project-title-container";
         const artsyTitle=document.createElement('div');
         artsyTitle.className="project-click";
-        artsyTitle.textContent="Artsy app - case study";
+        artsyTitle.textContent="Artsy mobile app - case study";
         artsyTitle.addEventListener('click',()=>{
             openArtsy();
         });
-        dashboard.append(artsyTitle);
+        artsyTitleContainer.appendChild(artsyTitle);
+        artsyTitleContainer.appendChild(circleIconWrapper2);
+        artsyTitleContainer.addEventListener('mouseover',()=>{
+            circleIcon2.src=circleUnfilled;
+        })
+        artsyTitleContainer.addEventListener('mouseout',()=>{
+            circleIcon2.src=circleFilled;
+        })
+        dashboard.append(artsyTitleContainer);
 
         const projectTitle = document.querySelector('.project-title');
         projectTitle.addEventListener('click',()=>{
@@ -250,13 +309,27 @@ export const domManipulator = (function(){
     function openArtsy(){
         emptyDashboard();
 
+        const circleIcon = document.createElement('img');
+        circleIcon.src=circleFilled;
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.append(circleIcon);
+        const sinsinTitleContainer=document.createElement('div');
+        sinsinTitleContainer.className="project-title-container";
         const sinsinTitle = document.createElement('div');
         sinsinTitle.className="project-click";
         sinsinTitle.textContent="Sin Sin Fine Art";
         sinsinTitle.addEventListener('click',()=>{
             openSinSin()
         });
-        dashboard.append(sinsinTitle);
+        sinsinTitleContainer.addEventListener('mouseover',()=>{
+            circleIcon.src=circleUnfilled;
+        })
+        sinsinTitleContainer.addEventListener('mouseout',()=>{
+            circleIcon.src=circleFilled;
+        })
+        sinsinTitleContainer.appendChild(sinsinTitle);
+        sinsinTitleContainer.appendChild(circleIconWrapper);
+        dashboard.append(sinsinTitleContainer);
         
         projectInfo(artsyInfo);
 
@@ -281,8 +354,6 @@ export const domManipulator = (function(){
             projectPage();
         })
     }
-
-    
 
     function imageRender(imageName){
         const infoContainer = dashboard.querySelector('#project-info');
@@ -335,6 +406,8 @@ export const domManipulator = (function(){
     return {
         emptyDashboard,
         adPageRender,
+        dngClosedRender,
+        dngOpenRender,
         projectPageRender,
         aboutPageRender,
         projectPage,

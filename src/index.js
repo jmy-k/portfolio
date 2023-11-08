@@ -8,6 +8,8 @@ const previewButton = document.querySelector('#preview-button');
 const projectButton = document.querySelector('#project-button');
 
 const dashboard=document.querySelector('#dashboard');
+const sidebar=document.querySelector('#sidebar')
+const sidebarCircles=sidebar.querySelectorAll('.circle');
 
 titleButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
@@ -44,6 +46,22 @@ titleButton.addEventListener('mousemove',()=>{
     setFont();
 });
 
+sidebar.addEventListener('mousemove',()=>{
+    function getColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function setColor() {
+        for (let i=0;i<sidebarCircles.length;i++){
+            sidebarCircles[i].style.backgroundColor = getColor()
+        }
+    }
+    setColor();
+})
 
 bioButton.addEventListener('click',()=>{
     domManipulator.aboutPageRender();
