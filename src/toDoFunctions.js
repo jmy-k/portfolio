@@ -46,10 +46,10 @@ const artsyIdea=["Ideation","Through affinity mapping, I summarized research fin
 const artsyFindings = ["","Most common uses of Artsy were to discover artworks and purchase artworks by artists already owned by the buyer.","Users enjoyed the process of discovery of new artwork and artists, and wanted to feel comfortable in their knowledge of the artist whose work they are buying.","Younger art enthusiasts were mostly deterred by the pricing and found it difficult to look for cheaper works.","Art collectors and buyers of art liked keeping track of artists whose work they already owned or have “followed” on the site, but found it difficult to do so on the app.","All users preferred to see artworks in person before purchasing."];
 const artsyHMW=["",{content:hmw1},{content:hmw2},{content:hmw3},{content:hmw4}]
 
-const aboutButton = document.querySelector('#about-button');
-const workButton = document.querySelector('#work-button');
+const adsButton = document.querySelector('#ads-button');
+const previewButton = document.querySelector('#preview-button');
+const projectButton = document.querySelector('#project-button');
 const dashboard = document.querySelector('#dashboard');
-const sidebar = document.querySelector('#sidebar');
 
 /// dom manipulator
 
@@ -61,13 +61,8 @@ export const domManipulator = (function(){
         }
     }
 
-    function emptySidebar(){
-        while (sidebar.children.length>0){
-            sidebar.children[0].remove();
-        }
-    }
-
     function aboutPageRender(){
+        emptyDashboard();
         // about me text
         const mainText = document.createElement('div');
         mainText.id="about-me-text";
@@ -83,43 +78,23 @@ export const domManipulator = (function(){
         para3.textContent="I have worked for two galleries, one in Hong Kong, and one in New York, and an art advisory firm in New York. These experiences demonstrated to me a large technological gap in the current art world; platforms meant to connect artists to their audiences and websites intended to support institutions and galleries lack efficiency and usability. This led me to my current journey of web development and UX UI design, where I am teaching myself HTML, CSS, and JavaScript. I created this site from scratch!"
 
         const para4=document.createElement('div');
-        para4.textContent="Though I have taken a seemingly drastic change, I genuinely believe in the positive potential of the ever-changing Internet in giving the much needed space and tools to artists and creatives. The ways in which one can easily discover, access, and learn about art currently are limited and mundane, reflecting the contemporary art world’s rapid cookie-cutter commercialization. There is little space to demonstrate what made an artist unique, only space for what made an artist sell. Art is essential and so are the people who create it, so I want to support them through design that centers artists.";
+        para4.textContent="Though I have taken a seemingly drastic change, I genuinely believe in the positive potential of the ever-changing Internet in giving the much needed space and tools to artists and creatives. The ways in which one can easily discover, access, and learn about art currently are limited and mundane, reflecting the contemporary art world’s rapid cookie-cutter commercialization. There is little space to demonstrate what makes an artist unique, only space for what makes an artist sell. Art is essential and so are the people who create it, so I want to support them through design that centers artists.";
 
         mainText.append(para1,para2,para3,para4)
 
         dashboard.appendChild(mainText);
     }
 
-    function workPageRender(){
-        carouselContentRender(chakaiaPosters);
-        carouselContentRender(jorindePosters);
-        carouselContentRender(setiantoPhotos);
+    function projectPageRender(){
+        emptyDashboard();
+        projectPage();
     }
 
-    function sidebarWork(){ //renders sidebar when "work" is clicked
-        const advertNav=document.createElement('div');
-        advertNav.textContent="ads and posters";
-        advertNav.className="sidebar-nav";
-        advertNav.addEventListener('click',()=>{
-            emptyDashboard();
-            projectInfo(adInfo);
-            carouselContentRender(chakaiaPosters);
-            carouselContentRender(jorindePosters);
-        })
-
-        const artworkNav = document.createElement('div');
-        artworkNav.textContent="artwork previews";
-        artworkNav.className="sidebar-nav";
-
-        const projectNav = document.createElement('div');
-        projectNav.textContent="projects";
-        projectNav.className="sidebar-nav";
-        projectNav.addEventListener('click',()=>{
-            projectPage()
-        })
-
-        sidebar.append(advertNav, artworkNav, projectNav);
-
+    function adPageRender(){
+        emptyDashboard();
+        projectInfo(adInfo);
+        carouselContentRender(chakaiaPosters);
+        carouselContentRender(jorindePosters);
     }
 
     function projectPage(){
@@ -139,31 +114,6 @@ export const domManipulator = (function(){
             });
 
             dashboard.append(sinsinTitle,artsyTitle);
-    }
-
-    function sidebarAbout(){ //called when "about" is clicked
-        const linkedInLink = document.createElement('a');
-        linkedInLink.href = "https://www.linkedin.com/in/julia-kan-683828173/";
-        linkedInLink.textContent="linkedin";
-        linkedInLink.setAttribute('target','_blank'); 
-        linkedInLink.setAttribute('rel','noreferrer noopener'); // opens in new tab
-        linkedInLink.className='socials';
-
-        const gitHubLink =document.createElement('a');
-        gitHubLink.href="https://github.com/jmy-k";
-        gitHubLink.textContent="github";
-        gitHubLink.setAttribute('target','_blank');
-        gitHubLink.setAttribute('rel','noreferrer noopener');
-        gitHubLink.className='socials';
-
-        const emailLink = document.createElement('a');
-        emailLink.href="mailto:myjuliakan@gmail.com";
-        emailLink.textContent="email";
-        emailLink.className='socials';
-
-        sidebar.appendChild(linkedInLink);
-        sidebar.appendChild(gitHubLink);
-        sidebar.appendChild(emailLink);
     }
 
     function carouselContentRender(itemList){ //makes image carousels
@@ -363,12 +313,10 @@ export const domManipulator = (function(){
 
     return {
         emptyDashboard,
-        emptySidebar,
+        adPageRender,
+        projectPageRender,
         aboutPageRender,
-        workPageRender,
-        sidebarWork,
         projectPage,
-        sidebarAbout,
         carouselContentRender,
         projectInfo,
         openSinSin,
