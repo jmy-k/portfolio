@@ -27,6 +27,8 @@ import hmw2 from "./assets/artsy hmw 2.jpg";
 import hmw3 from "./assets/artsy hmw 3.jpg";
 import hmw4 from "./assets/artsy hmw 4.jpg";
 
+import circleFilled from "./assets/circle.svg";
+
 
 const adInfo = [{title:"David Nolan Gallery", subtitle:""}, ["i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."]]
 const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April Issue", content: chbBRApril}, {title: "The Brooklyn Rail, May Issue", content:chbBRMay}, {title:"Artforum, April Issue", content:chbAFApril},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
@@ -99,22 +101,41 @@ export const domManipulator = (function(){
 
     function projectPage(){
         emptyDashboard();
-            const sinsinTitle = document.createElement('div');
-            sinsinTitle.className="project-click";
-            sinsinTitle.textContent="Sin Sin Fine Art";
-            sinsinTitle.addEventListener('click',()=>{
-                openSinSin()
-            });
+        const circleIcon = document.createElement('img');
+        circleIcon.src=circleFilled;
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.append(circleIcon);
 
-            const artsyTitle=document.createElement('div');
-            artsyTitle.className="project-click";
-            artsyTitle.textContent="Artsy mobile app - case study";
-            artsyTitle.addEventListener('click',()=>{
-                openArtsy();
-            });
+        const sinsinTitleContainer=document.createElement('div');
+        sinsinTitleContainer.className="project-title-container";
+        const sinsinTitle = document.createElement('div');
+        sinsinTitle.className="project-click";
+        sinsinTitle.textContent="Sin Sin Fine Art";
+        sinsinTitle.addEventListener('click',()=>{
+            openSinSin()
+        });
+        sinsinTitleContainer.appendChild(sinsinTitle);
+        sinsinTitleContainer.appendChild(circleIconWrapper);
 
-            dashboard.append(sinsinTitle,artsyTitle);
-    }
+
+        let circleIcon2 = document.createElement('img');
+        circleIcon2.src=circleFilled;
+        const circleIconWrapper2 = document.createElement('figure');
+        circleIconWrapper2.append(circleIcon2);
+
+        const artsyTitleContainer=document.createElement('div');
+        artsyTitleContainer.className="project-title-container";
+        const artsyTitle=document.createElement('div');
+        artsyTitle.className="project-click";
+        artsyTitle.textContent="Artsy mobile app - case study";
+        artsyTitle.addEventListener('click',()=>{
+            openArtsy();
+        });
+        artsyTitleContainer.appendChild(artsyTitle);
+        artsyTitleContainer.appendChild(circleIconWrapper2);
+
+        dashboard.append(sinsinTitleContainer,artsyTitleContainer);
+}
 
     function carouselContentRender(itemList){ //makes image carousels
         const carouselContainer = document.createElement('div');

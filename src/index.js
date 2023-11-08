@@ -9,7 +9,6 @@ const projectButton = document.querySelector('#project-button');
 
 const dashboard=document.querySelector('#dashboard');
 
-
 titleButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
 
@@ -29,12 +28,22 @@ titleButton.addEventListener('mousemove',()=>{
         }
         return color;
     }
-      
     function setColor() {
         titleButton.style.color = getColor();
-      }
+    }
     setColor();
+    titleButton.classList.add('changefont')
+   function getFont(){
+        const randomFonts = ['','Arial','Lucida','Times New Roman','Helvetica','Cambria','Verdana'];
+        let selectedFont = randomFonts[Math.floor(Math.random() * 6)];
+        return selectedFont;
+    }
+    function setFont(){
+        titleButton.style.fontFamily = getFont();
+    }
+    setFont();
 });
+
 
 bioButton.addEventListener('click',()=>{
     domManipulator.aboutPageRender();
