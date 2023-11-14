@@ -1,13 +1,22 @@
 import chbBRApril from "./assets/DNG-CHB-BR-April.jpg";
+import brAprilMag from "./assets/br-mag-april.jpeg"
 import chbBRMay from "./assets/DNG-CHB-BR-May.jpg";
+import brMayMag from "./assets/br-mag-may.jpeg";
 import chbAFApril from "./assets/DNG-CHB-AF-April.jpeg";
+import afMag from "./assets/af-mag.jpeg";
 import chbArtnet from "./assets/DNG-CHB-Artnet-ads.jpeg";
 import chbBrochureSmall from "./assets/DNG-CHB-brochure.jpg";
 
 import jvBRFeb from "./assets/DNG-JV-BR-Feb.jpg";
+import brJV from "./assets/br-mag-jv.jpeg";
 import jvInvite from "./assets/DNG-JV-invite-full.jpg";
 import jvArtnet1 from "./assets/DNG-JV-Artnet-ad-full1.jpg";
 import jvArtnet2 from "./assets/DNG-JV-Artnet-ad-full2.jpg";
+
+import mmBR from "./assets/DNG-MM-BR.jpeg";
+import mkBR from "./assets/DNG-MK-BR.jpeg";
+import mkArtnet from "./assets/DNG-MK-artnet.jpg";
+import jsBR from "./assets/DNG-JS-BR.jpg";
 
 import sinsinProcess1 from "./assets/SINSIN_process_1.jpg";
 import sinsinProcess2 from "./assets/SINSIN_process_2.jpg";
@@ -27,17 +36,15 @@ import hmw2 from "./assets/artsy hmw 2.jpg";
 import hmw3 from "./assets/artsy hmw 3.jpg";
 import hmw4 from "./assets/artsy hmw 4.jpg";
 
-import circleFilled from "./assets/circle.svg";
-import circleUnfilled from "./assets/circle-outline.svg";
-
 
 const adInfo = [{title:"David Nolan Gallery", subtitle:""}, ["i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."]]
-const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April Issue", content: chbBRApril}, {title: "The Brooklyn Rail, May Issue", content:chbBRMay}, {title:"Artforum, April Issue", content:chbAFApril},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
-const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February Issue", content:jvBRFeb},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
+const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April 2023", content: chbBRApril}, {title: "The Brooklyn Rail, April 2023", content: brAprilMag}, {title: "The Brooklyn Rail, May 2023", content:chbBRMay},  {title: "The Brooklyn Rail, May 2023", content:brMayMag}, {title:"Artforum, April 2023", content:chbAFApril}, {title:"Artforum, April 2023", content:afMag},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
+const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February 2023", content:jvBRFeb}, {title:"The Brooklyn Rail, February 2023", content:brJV},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
+const miscPosters = ["Other Exhibitions",{title:"The Brooklyn Rail, September 2022", content:mmBR},{title:"The Brooklyn Rail, November 2022",content:mkBR},{title:"Artnet Website Desktop and Mobile Set",content:mkArtnet},{title:"The Brooklyn Rail Website Banner",content:jsBR}]
 
 const setiantoInfo=[{title:"Sin Sin Fine Art", subtitle:"Breathe - installation for Dwi Setianto"}, ["i was tasked with designing and constructing an installation space to display two of our artist’s digital video works. the decision to include the two works were made last-minute, with only a week left before the exhibition opening. for this installation, we had to confront several obstacles: short time-frame, limited budget, and no gallery space. most of the gallery space was already occupied with other artworks with no way of rearranging that would allow for two additional works to be projected on the walls. i decided to use the gallery’s storage space instead, and to create an immersive installation that would match the subject and theme of the works.", " Dwi Setianto’s videos, like his body of work, are grounded in his connection with nature and the utilization of found materials. the first video is of leaves he collected while working as a park cleaner, blowing in a perpetual wind. the second is a compilation of water puddles, and its reflection of leaves, birds, and other subjects in motion.", "i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."]]
 const setiantoProcess=["",{title:"rough sketch floorplan", content:sinsinProcess1, info:"unfortunately, the gallery lacked a floor plan with measurements of the space, and given the irregular shape of the shelving and various furniture and objects placed in storage, it was difficult to take accurate measurements of the space."},{title:"doorway sketch", content:sinsinProcess2, info:"the fabric had to be seamless from floor to ceiling to look more like a tunnel. i also wanted it to pool at the bottom rather than be completely taut. with the doorway as a guide, i also accounted for excess fabric for the effect."},{title:"fabric sketch",content:sinsinProcess3, info:" after drawing a rough sketch of the space, i determined that two bolts of canvas were needed from which 17 pieces, each 7 meters long, were cut. these pieces were sewn together lengthwise. the crosses here mark where the jute was sewn onto the fabric."},{title:"brainstorm",content:sinsinProcess4, info:"this installation required fabric that was thick enough to be opaque, but light enough to be hung securely. I decided on plain canvas to be hung up with jute strings. not only did canvas satisfy the requirements, but its coarse nature and wide fibers worked to invite touch.", para3:"i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."}]
-const setiantoPhotos=["Breathe - exhibition opening",{title:"",content:sinsin1},{title:"",content:sinsin2},{title:"",content:sinsin4},{title:"",content:sinsin5}]
+const setiantoPhotos=["Exhibition opening",{title:"",content:sinsin1},{title:"",content:sinsin2},{title:"",content:sinsin4},{title:"",content:sinsin5}]
 
 const artsyInfo=[{title:"Artsy mobile app - case study", subtitle:"personal project - adding new features to the app"},[]]
 const artsyBackground = ["Background","Artsy is a platform for discovering and buying art from galleries and auctions. While working at David Nolan Gallery, a gallery client of the site, I spent a lot of time using the website on both desktop and mobile. The site was our main mode of connecting with interested buyers who were not able to visit the gallery in person."];
@@ -92,6 +99,7 @@ export const domManipulator = (function(){
         projectInfo(adInfo);
         carouselContentRender(chakaiaPosters);
         carouselContentRender(jorindePosters);
+        carouselContentRender(miscPosters);
 
         const dngTitleContainer = document.querySelector('.project-title-container');
 
@@ -118,10 +126,7 @@ export const domManipulator = (function(){
 
     function projectPage(){
         emptyDashboard();
-        const circleIcon = document.createElement('img');
-        circleIcon.src=circleFilled;
-        const circleIconWrapper = document.createElement('figure');
-        circleIconWrapper.append(circleIcon);
+ 
 
         const sinsinTitleContainer=document.createElement('div');
         sinsinTitleContainer.className="project-title-container";
@@ -131,20 +136,30 @@ export const domManipulator = (function(){
         sinsinTitle.addEventListener('click',()=>{
             openSinSin()
         });
-        sinsinTitleContainer.addEventListener('mouseover',()=>{
-            circleIcon.src=circleUnfilled;
+        const circleIcon = document.createElement('div');
+        circleIcon.className="circle";
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.className="divider";
+        circleIconWrapper.append(circleIcon);
+
+        sinsinTitleContainer.append(sinsinTitle,circleIconWrapper);
+        sinsinTitleContainer.addEventListener('mousemove',()=>{
+            function getColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            function setColor() {
+                circleIcon.style.backgroundColor = getColor()
+                
+            }
+            setColor();
         })
-        sinsinTitleContainer.addEventListener('mouseout',()=>{
-            circleIcon.src=circleFilled;
-        })
-        sinsinTitleContainer.appendChild(sinsinTitle);
-        sinsinTitleContainer.appendChild(circleIconWrapper);
 
 
-        let circleIcon2 = document.createElement('img');
-        circleIcon2.src=circleFilled;
-        const circleIconWrapper2 = document.createElement('figure');
-        circleIconWrapper2.append(circleIcon2);
 
         const artsyTitleContainer=document.createElement('div');
         artsyTitleContainer.className="project-title-container";
@@ -154,13 +169,28 @@ export const domManipulator = (function(){
         artsyTitle.addEventListener('click',()=>{
             openArtsy();
         });
-        artsyTitleContainer.appendChild(artsyTitle);
-        artsyTitleContainer.appendChild(circleIconWrapper2);
+
+        const circleIcon2 = document.createElement('div');
+        circleIcon2.className="circle";
+        const circleIconWrapper2 = document.createElement('figure');
+        circleIconWrapper2.className="divider";
+        circleIconWrapper2.append(circleIcon2);
+
+        artsyTitleContainer.append(artsyTitle,circleIconWrapper2);
         artsyTitleContainer.addEventListener('mouseover',()=>{
-            circleIcon2.src=circleUnfilled;
-        })
-        artsyTitleContainer.addEventListener('mouseout',()=>{
-            circleIcon2.src=circleFilled;
+            function getColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            function setColor() {
+                circleIcon2.style.backgroundColor = getColor()
+                
+            }
+            setColor();
         })
 
         dashboard.append(sinsinTitleContainer,artsyTitleContainer);
@@ -177,8 +207,9 @@ export const domManipulator = (function(){
         const carouselTitle=document.createElement('div');
         carouselTitle.className="carousel-title";
         carouselTitle.textContent=itemList[0];
-        if (carouselTitle.textContent==! ""){
+        if (carouselTitle.textContent !== ""){
             carouselContainer.appendChild(carouselTitle);
+
         }
 
         for (let i=1;i<itemList.length;i++){
@@ -243,17 +274,27 @@ export const domManipulator = (function(){
         projectTitle.className="project-title";
         projectTitle.textContent=name[0].title;
         
-        const circleIcon = document.createElement('img');
-        circleIcon.src=circleUnfilled;
+        const circleIcon = document.createElement('div');
+        circleIcon.className="circle";
         const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.className="divider";
         circleIconWrapper.append(circleIcon);
 
         projectTitleContainer.append(projectTitle,circleIconWrapper)
         projectTitleContainer.addEventListener('mouseover',()=>{
-            circleIcon.src=circleFilled;
-        })
-        projectTitleContainer.addEventListener('mouseout',()=>{
-            circleIcon.src=circleUnfilled;
+            function getColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            function setColor() {
+                circleIcon.style.backgroundColor = getColor()
+                
+            }
+            setColor();
         })
 
         const projectSubtitle=document.createElement('div');
@@ -276,12 +317,6 @@ export const domManipulator = (function(){
         carouselContentRender(setiantoProcess);
         carouselContentRender(setiantoPhotos);
 
-        const setiantoSubtitle = document.querySelector('.project-subtitle');
-
-        let circleIcon2 = document.createElement('img');
-        circleIcon2.src=circleFilled;
-        const circleIconWrapper2 = document.createElement('figure');
-        circleIconWrapper2.append(circleIcon2);
         const artsyTitleContainer=document.createElement('div');
         artsyTitleContainer.className="project-title-container";
         const artsyTitle=document.createElement('div');
@@ -291,13 +326,29 @@ export const domManipulator = (function(){
             openArtsy();
         });
         artsyTitleContainer.appendChild(artsyTitle);
-        artsyTitleContainer.appendChild(circleIconWrapper2);
+
+        const circleIcon = document.createElement('div');
+        circleIcon.className="circle";
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.className="divider";
+        circleIconWrapper.append(circleIcon);
+        artsyTitleContainer.append(circleIconWrapper)
         artsyTitleContainer.addEventListener('mouseover',()=>{
-            circleIcon2.src=circleUnfilled;
+            function getColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            function setColor() {
+                circleIcon.style.backgroundColor = getColor()
+                
+            }
+            setColor();
         })
-        artsyTitleContainer.addEventListener('mouseout',()=>{
-            circleIcon2.src=circleFilled;
-        })
+
         dashboard.append(artsyTitleContainer);
 
         const projectTitle = document.querySelector('.project-title');
@@ -309,10 +360,6 @@ export const domManipulator = (function(){
     function openArtsy(){
         emptyDashboard();
 
-        const circleIcon = document.createElement('img');
-        circleIcon.src=circleFilled;
-        const circleIconWrapper = document.createElement('figure');
-        circleIconWrapper.append(circleIcon);
         const sinsinTitleContainer=document.createElement('div');
         sinsinTitleContainer.className="project-title-container";
         const sinsinTitle = document.createElement('div');
@@ -321,14 +368,28 @@ export const domManipulator = (function(){
         sinsinTitle.addEventListener('click',()=>{
             openSinSin()
         });
+        const circleIcon = document.createElement('div');
+        circleIcon.className="circle";
+        const circleIconWrapper = document.createElement('figure');
+        circleIconWrapper.className="divider";
+        circleIconWrapper.append(circleIcon);
+
+        sinsinTitleContainer.append(sinsinTitle,circleIconWrapper);
         sinsinTitleContainer.addEventListener('mouseover',()=>{
-            circleIcon.src=circleUnfilled;
+            function getColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            function setColor() {
+                circleIcon.style.backgroundColor = getColor()
+                
+            }
+            setColor();
         })
-        sinsinTitleContainer.addEventListener('mouseout',()=>{
-            circleIcon.src=circleFilled;
-        })
-        sinsinTitleContainer.appendChild(sinsinTitle);
-        sinsinTitleContainer.appendChild(circleIconWrapper);
         dashboard.append(sinsinTitleContainer);
         
         projectInfo(artsyInfo);
@@ -341,13 +402,20 @@ export const domManipulator = (function(){
         sectionRender(artsyProblem);
 
         sectionRender(artsyResearch);
-        listRender(artsyFindings);
+        const researchContainer = document.querySelector('.Research');
+        listRender(artsyFindings,researchContainer);
         sectionRender(artsyPersona);
-        carouselContentRender(artsyUsers);
+        const personaContainer=document.querySelector('.Personas')
+        imageRender(persona1,personaContainer);
+        imageRender(persona2,personaContainer);
+        
 
         sectionRender(artsyIdea);
+        const ideaContainer = document.querySelector('.Ideation');
         carouselContentRender(artsyHMW);
-        imageRender(flowchart);
+        const artsyHMWCarousel = infoContainer.querySelector('.carousel');
+        ideaContainer.appendChild(artsyHMWCarousel);
+        imageRender(flowchart,ideaContainer);
         
         const projectTitle = document.querySelector('.project-title');
         projectTitle.addEventListener('click',()=>{
@@ -355,39 +423,45 @@ export const domManipulator = (function(){
         })
     }
 
-    function imageRender(imageName){
-        const infoContainer = dashboard.querySelector('#project-info');
-
+    function imageRender(imageName, container){
         const itemFigure = document.createElement('figure'); //image wrapper for easier resizing
         const itemImage = document.createElement('img');
         itemImage.src=imageName;
         
         itemFigure.append(itemImage);
-        infoContainer.append(itemFigure);
+        container.append(itemFigure);
     }
 
     function sectionRender(sectionName){
         const infoContainer = dashboard.querySelector('#project-info');
+        const sectionContainer = document.createElement('div');
+        sectionContainer.className="section-container";
+        sectionContainer.classList.add(sectionName[0]);
 
         const sectionTitle = document.createElement('div');
         sectionTitle.className="section-title";
         sectionTitle.textContent=sectionName[0];
         sectionTitle.classList.add(sectionName[0]);
 
-        infoContainer.append(sectionTitle);
+        sectionContainer.append(sectionTitle);
 
+        const sectionParagraphs = document.createElement('div');
+        sectionParagraphs.className="section-paragraph-container";
+        sectionParagraphs.classList.add(sectionName[0]);
         for(let i=1; i<sectionName.length; i++){
             const sectionPara=document.createElement('div');
             sectionPara.className="section-paragraph";
             sectionPara.textContent=sectionName[i];
             sectionPara.classList.add(sectionName[0]);
 
-            infoContainer.append(sectionPara);
+            sectionParagraphs.append(sectionPara);
         }
+
+        sectionContainer.append(sectionParagraphs);
+        infoContainer.append(sectionContainer);
     }
     
-    function listRender(listName){
-        const infoContainer = dashboard.querySelector('#project-info');
+    function listRender(listName,container){
 
         const listTitle = document.createElement('ul');
         listTitle.className="list-title";
@@ -400,7 +474,7 @@ export const domManipulator = (function(){
             listTitle.appendChild(listItem);
         }
 
-        infoContainer.append(listTitle);
+        container.append(listTitle);
     }
 
     return {
