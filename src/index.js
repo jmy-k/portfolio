@@ -76,12 +76,15 @@ adsButton.addEventListener('click',()=>{
 
 previewButton.addEventListener('click',()=>{
     domManipulator.emptyDashboard();
+    domManipulator.previewPageRender();
 
     dashboard.classList.add('selected')  
     bioButton.classList.remove('selected');
     adsButton.classList.remove('selected');
     previewButton.classList.add('selected');
     projectButton.classList.remove('selected');
+
+
 })
 
 projectButton.addEventListener('click',()=>{
