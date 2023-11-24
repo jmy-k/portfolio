@@ -54,16 +54,18 @@ import hmw1 from "./assets/artsy hmw 1.jpg";
 import hmw2 from "./assets/artsy hmw 2.jpg";
 import hmw3 from "./assets/artsy hmw 3.jpg";
 import hmw4 from "./assets/artsy hmw 4.jpg";
-
+import wireflow1 from "./assets/wireflow1.jpg";
+import wireflow2 from "./assets/wireflow2.jpg";
+import wireflow3 from "./assets/wireflow3.jpg";
 
 const adInfo = [{title:"David Nolan Gallery", subtitle:""}, ["i created press packages for each exhibition which includes print media, website and email banners, invitation cards, and information brochures.", "each package maintains gallery branding while subtly incorporating thematic styles unique to the exhibition. for each item, i was in charge of image selection, color scheme, and layout."]]
-const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April 2023", content: chbBRApril}, {title: "The Brooklyn Rail, April 2023", content: brAprilMag}, {title: "The Brooklyn Rail, May 2023", content:chbBRMay},  {title: "The Brooklyn Rail, May 2023", content:brMayMag}, {title:"Artforum, April 2023", content:chbAFApril}, {title:"Artforum, April 2023", content:afMag},{title: "Artnet Website Desktop and Mobile", content: chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall}];
-const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February 2023", content:jvBRFeb}, {title:"The Brooklyn Rail, February 2023", content:brJV},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite}]
-const miscPosters = ["Other Exhibitions",{title:"The Brooklyn Rail, September 2022", content:mmBR},{title:"The Brooklyn Rail, November 2022",content:mkBR},{title:"Artnet Website Desktop and Mobile Set",content:mkArtnet},{title:"The Brooklyn Rail Website Banner",content:jsBR}]
+const chakaiaPosters = ["Chakaia Booker: Public Opinion", {title: "The Brooklyn Rail, April 2023", content: chbBRApril, link:chbBRApril}, {title: "The Brooklyn Rail, April 2023", content: brAprilMag,link:brAprilMag}, {title: "The Brooklyn Rail, May 2023", content:chbBRMay,link:chbBRMay},  {title: "The Brooklyn Rail, May 2023", content:brMayMag, link:brMayMag}, {title:"Artforum, April 2023", content:chbAFApril,link:chbAFApril}, {title:"Artforum, April 2023", content:afMag,link:afMag},{title: "Artnet Website Desktop and Mobile", content: chbArtnet,link:chbArtnet}, {title:"Exhibition Card Brochure", content:chbBrochureSmall, link:"https://drive.google.com/file/d/1I99HvpVuc6nbSHVgdU4ySWwFusLyCy44/view?usp=drive_link"}];
+const jorindePosters = ["Jorinde Voigt: The Match", {title:"The Brooklyn Rail, February 2023", content:jvBRFeb, link:jvBRFeb}, {title:"The Brooklyn Rail, February 2023", content:brJV,link:brJV},{title:"Artnet Website Desktop and Mobile Set 1", content:jvArtnet1,link:jvArtnet1},{title:"Artnet Website Desktop and Mobile Set 2", content:jvArtnet2,link:jvArtnet2},{title:"Exhibition Invitation Card", content:jvInvite, link:jvInvite}]
+const miscPosters = ["Other Exhibitions",{title:"The Brooklyn Rail, September 2022", content:mmBR, link:mmBR},{title:"The Brooklyn Rail, November 2022",content:mkBR,link:mkBR},{title:"Artnet Website Desktop and Mobile Set",content:mkArtnet,link:mkArtnet},{title:"The Brooklyn Rail Website Banner",content:jsBR,link:jsBR}]
 
 const previewInfo = [{title:"David Nolan Gallery",subtitle:""},["i wrote content for and designed artwork previews which are used for press and clients for promotional and sale purposes."]]
-const fairPreviews = ["Art Fairs and Group Exhibitions",{title:"",content:adaaPre,linkname:"https://drive.google.com/file/d/1D5IYz86tNzJ40eT6VuDQ9itHLPr5azrz/view?usp=drive_link"},{title:"",content:harttPre,linkname:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:baselPre,linkname:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:dafPre,linkname:"https://drive.google.com/file/d/1au43auWyHDSH5InU3wKriHGTWv6ivREJ/view?usp=drive_link"},{title:"",content:oehlenPre,linkname:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:digPre,linkname:"https://drive.google.com/file/d/1cevtx9B9lGeDHF-uGx6NQk_60V_mMMnT/view?usp=drive_link"},{title:"",content:dinePre,linkname:"https://drive.google.com/file/d/11a_Z78JWUkKaOnVLa03nNEqpAGYlIQHo/view?usp=drive_link"},{title:"",content:madPre,linkname:"https://drive.google.com/file/d/11a_Z78JWUkKaOnVLa03nNEqpAGYlIQHo/view?usp=drive_link"}]
-const regPreviews = ["Solo Exhibitions",{title:"",content:chbPre,linkname:"https://drive.google.com/file/d/1vwvuTcx_NGBN3ZXSWdVLey-eDUWudS2I/view?usp=drive_link"},{title:"",content:jvPre2,linkname:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:jvPre1,linkname:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:jvPre4,linkname:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:pauloPre,linkname:"https://drive.google.com/file/d/11z6xf-YDLTaDOS2XgchSrbZ7i77XpTLU/view?usp=drive_link"},{title:"",content:jvPre3,linkname:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:pastaPre, linkname:"https://drive.google.com/file/d/11z6xf-YDLTaDOS2XgchSrbZ7i77XpTLU/view?usp=drive_link"},{title:"",content:jvPre,linkname:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:rockPre,linkname:"https://drive.google.com/file/d/1au43auWyHDSH5InU3wKriHGTWv6ivREJ/view?usp=drive_link"}]
+const fairPreviews = ["Art Fairs and Group Exhibitions",{title:"",content:adaaPre,link:"https://drive.google.com/file/d/1D5IYz86tNzJ40eT6VuDQ9itHLPr5azrz/view?usp=drive_link"},{title:"",content:harttPre,link:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:baselPre,link:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:dafPre,link:"https://drive.google.com/file/d/1au43auWyHDSH5InU3wKriHGTWv6ivREJ/view?usp=drive_link"},{title:"",content:oehlenPre,link:"https://drive.google.com/file/d/1xAdZPZp37xhbtKoR6kiGSjr3Q7-Dx_lE/view?usp=drive_link"},{title:"",content:digPre,link:"https://drive.google.com/file/d/1cevtx9B9lGeDHF-uGx6NQk_60V_mMMnT/view?usp=drive_link"},{title:"",content:dinePre,link:"https://drive.google.com/file/d/11a_Z78JWUkKaOnVLa03nNEqpAGYlIQHo/view?usp=drive_link"},{title:"",content:madPre,link:"https://drive.google.com/file/d/11a_Z78JWUkKaOnVLa03nNEqpAGYlIQHo/view?usp=drive_link"}]
+const regPreviews = ["Solo Exhibitions",{title:"",content:chbPre,link:"https://drive.google.com/file/d/1vwvuTcx_NGBN3ZXSWdVLey-eDUWudS2I/view?usp=drive_link"},{title:"",content:jvPre2,link:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:jvPre1,link:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:jvPre4,link:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:pauloPre,link:"https://drive.google.com/file/d/11z6xf-YDLTaDOS2XgchSrbZ7i77XpTLU/view?usp=drive_link"},{title:"",content:jvPre3,link:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:pastaPre, link:"https://drive.google.com/file/d/11z6xf-YDLTaDOS2XgchSrbZ7i77XpTLU/view?usp=drive_link"},{title:"",content:jvPre,link:"https://drive.google.com/file/d/1ihJT4Q5tP4q-AG-S4-_G7tXNrlgTz0lY/view?usp=drive_link"},{title:"",content:rockPre,link:"https://drive.google.com/file/d/1au43auWyHDSH5InU3wKriHGTWv6ivREJ/view?usp=drive_link"}]
 
 
 const setiantoInfo=[{title:"Sin Sin Fine Art", subtitle:"Breathe - installation for Dwi Setianto, 2020"}, ["i was tasked with designing and constructing an installation space to display two of our artist’s digital video works. the decision to include the two works were made last-minute, with only a week left before the exhibition opening. for this installation, we had to confront several obstacles: short time-frame, limited budget, and no gallery space. most of the gallery space was already occupied with other artworks with no way of rearranging that would allow for two additional works to be projected on the walls. i decided to use the gallery’s storage space instead, and to create an immersive installation that would match the subject and theme of the works.", " Dwi Setianto’s videos, like his body of work, are grounded in his connection with nature and the utilization of found materials. the first video is of leaves he collected while working as a park cleaner, blowing in a perpetual wind. the second is a compilation of water puddles, and its reflection of leaves, birds, and other subjects in motion.", "i wanted to create a tactile, tunnel-like experience for visitors, which at the same time would serve to hide the contents of the storage room. i hung large swathes of fabric from the ceiling, then draping and anchoring it in various points to create folds emulate movement. as the videos play, the moving leaves and birds would interact with the ripples of the fabric."]]
@@ -72,12 +74,18 @@ const setiantoPhotos=["Exhibition opening",{title:"",content:sinsin1},{title:"",
 
 const artsyInfo=[{title:"Artsy mobile app - case study", subtitle:"personal project - adding new features to the app, 2022"},[]]
 const artsyBackground = ["Background","Artsy is a platform for discovering and buying art from galleries and auctions. While working at David Nolan Gallery, a gallery client of the site, I spent a lot of time using the website on both desktop and mobile. The site was our main mode of connecting with interested buyers who were not able to visit the gallery in person."];
-const artsyProblem = ["Problem","Colleagues, clients, and I had difficulty in finding information due to being overwhelmed by the disorganization of and amount of information on the website. I wanted to research and prototype some new features for Artsy's mobile app in order to find ways to create a more efficient and enjoyable experience for users."];
-const artsyResearch=["Research","A variety of research methods were used to determine user perception of Artsy and what needs are not being met. Initial survey served as a screening before more in-depth interviews and usability testing. I determined their age, occupation, use of Artsy, interest in art, and budget. I found that most users were professionals in the industry, young art enthusiasts, and mid-aged buyers of art.","After conducting the survey, I reached out to existing users of Artsy for one-on-one interviews. The interview was immediately followed by a usability test, with a few follow-up questions after. The usability test was not moderated; users were given a list of tasks and were not guided in any way to complete tasks. Here is what I learned:"]
+const artsyProblem = ["Problem","Colleagues, clients, and I had difficulty in finding information due to being overwhelmed by the disorganization of and amount of information on the website. I wanted to research and prototype some new features for Artsy's mobile app in order to find ways to create a more efficient and enjoyable way for users to explore artworks."];
+const artsyResearch=["Research","A variety of research methods were used to determine user perception of Artsy and what needs are not being met. Initial survey served as a screening before more in-depth interviews and usability testing. I determined their age, occupation, use of Artsy, interest in art, and budget. I found that most users were professionals in the industry, young art enthusiasts, and mid-aged buyers of art.","After conducting the survey, I reached out to existing users of Artsy for one-on-one interviews. The interview was immediately followed by a usability test, with a few follow-up questions after. The usability test was not moderated; users were given a list of tasks and were not guided in any way to complete tasks."]
 const artsyPersona = ["Personas","From these findings I designed two user personas to help me empathize with the end user in the remaining steps of the process."]
 const artsyIdea=["Ideation","Through affinity mapping, I summarized research findings and found main pain points for which I generated solutions by answering a few “How Might We” questions. I then completed a series of rapid-fire ideation, generating at least 10 solutions for each question. I converged these ideas so that they tackled each pain point I found."]
-const artsyFindings = ["","Most common uses of Artsy were to discover artworks and purchase artworks by artists already owned by the buyer.","Users enjoyed the process of discovery of new artwork and artists, and wanted to feel comfortable in their knowledge of the artist whose work they are buying.","Younger art enthusiasts were mostly deterred by the pricing and found it difficult to look for cheaper works.","Art collectors and buyers of art liked keeping track of artists whose work they already owned or have “followed” on the site, but found it difficult to do so on the app.","All users preferred to see artworks in person before purchasing."];
-const artsyHMW=["",{content:hmw1},{content:hmw2},{content:hmw3},{content:hmw4}]
+const artsyFlow=["Wireflows", "I designed several wireflows that included the ideas above. These journey paths also included multiple ways to explore new artists and artworks, while also completing the tasks originally presented in the usability test."]
+const artsyTest=["The tasks for the usability test:","Find an artwork you want to buy","Find a new artist/gallery you might be interested in","“Like” a few works of art and make a saved list","Find an art show or event near you"];
+const artsyFindings = ["Here is what I learned:","Most common uses of Artsy were to discover artworks and purchase artworks by artists already owned by the buyer.","Users enjoyed the process of discovery of new artwork and artists, and wanted to feel comfortable in their knowledge of the artist whose work they are buying.","Younger art enthusiasts were mostly deterred by the pricing and found it difficult to look for cheaper works.","Art collectors and buyers of art liked keeping track of artists whose work they already owned or have “followed” on the site, but found it difficult to do so on the app.","All users preferred to see artworks in person before purchasing."];
+const artsyHMW=["",{content:hmw1,link:hmw1},{content:hmw2,link:hmw2},{content:hmw3,link:hmw3},{content:hmw4,link:hmw4}]
+const artsyWireflow = ["",{content:wireflow1,link:wireflow1},{content:wireflow2,link:wireflow2},{content:wireflow3,link:wireflow3}]
+const artsyMidfid = ["Mid-Fidelity","Once wireflows were designed I created a mid-fidelity prototype to test how users would carry out the mentioned tasks."]
+const artsyFindings2 = ["More takeaways:","Hamburger menu proved to be useful - 80% of users navigated to it to complete their tasks each time","Success rate in completing tasks were higher because there were multiple ways to complete a task","The 'Movements' section should be more prominent.","Users like Amy who had a smaller budget would use the price sorting filter, while art collectors, like John, used the 'materials' filter - demonstrating the importance of the hierarchy of filters that was prioritized based on earlier research findings."]
+const artsyHiFid=["High-Fidelity","After the second round of usability tests and incorporating findings, I designed a high fidelity prototype to tackle user's additional concerns."]
 
 
 const dashboard = document.querySelector('#dashboard');
@@ -98,7 +106,7 @@ export const domManipulator = (function(){
         const mainText = document.createElement('div');
         mainText.id="about-me-text";
 
-        // had to separate it like this in order for nice lineb breaks
+        // had to separate it like this in order for nice line breaks
         const para1 = document.createElement('div');
         para1.textContent="i was born and raised in Hong Kong, and am currently between home and New York City.";
         
@@ -253,9 +261,8 @@ export const domManipulator = (function(){
         const carouselTitle=document.createElement('div');
         carouselTitle.className="carousel-title";
         carouselTitle.textContent=itemList[0];
-        if (carouselTitle.textContent !== ""){
+        if (carouselTitle.textContent !== ""){ //not all carousels need a title
             carouselContainer.appendChild(carouselTitle);
-
         }
 
         for (let i=1;i<itemList.length;i++){
@@ -264,7 +271,7 @@ export const domManipulator = (function(){
             const itemFigure = document.createElement('figure'); //image wrapper for easier resizing
             const itemLink = document.createElement('a');
             itemLink.target = "_blank";
-            itemLink.href = itemList[i].linkname;
+            itemLink.href = itemList[i].link;
             const itemImage = document.createElement('img');
             itemImage.src=itemList[i].content;
             itemLink.appendChild(itemImage);
@@ -473,6 +480,25 @@ export const domManipulator = (function(){
         const artsyHMWCarousel = document.querySelector('.carousel');
         ideaContainer.appendChild(artsyHMWCarousel);
         imageRender(flowchart,ideaContainer);
+
+        sectionRender(artsyFlow);
+        const flowContainer = document.querySelector(".Wireflows");
+        listRender(artsyTest,flowContainer);
+        carouselContentRender(artsyWireflow);
+        const wireflowCarousel = document.querySelectorAll('.carousel')[1];
+        flowContainer.appendChild(wireflowCarousel);
+
+        sectionRender(artsyMidfid);
+        const midfidContainer = document.querySelector(".Mid-Fidelity");
+        listRender(artsyFindings2,midfidContainer);
+
+        sectionRender(artsyHiFid);
+        const hifidContainer = document.querySelector(".High-Fidelity");
+        const prototypeLink = document.createElement("a");
+        hifidContainer.appendChild(prototypeLink);
+        prototypeLink.target="_blank";
+        prototypeLink.href="https://www.figma.com/proto/fDMGebTP6CHdGvfJu8FZG9/artsy-wireframe?page-id=0%3A1&type=design&node-id=5-51&viewport=3431%2C851%2C0.55&t=BWW1Wri6bWDxgbHa-1&scaling=scale-down&starting-point-node-id=5%3A51&mode=design";
+        prototypeLink.textContent="View the prototype here."
         
         const projectTitle = document.querySelector('.project-title');
         projectTitle.addEventListener('click',()=>{
@@ -480,12 +506,18 @@ export const domManipulator = (function(){
         })
     }
 
-    function imageRender(imageName, container){
+    function imageRender(imageName, container){ //so that it appends to the appropriate section in the artsy page for easier styling
         const itemFigure = document.createElement('figure'); //image wrapper for easier resizing
+
+        const itemLink=document.createElement('a');
+        itemLink.href = imageName;
+        itemLink.target = "_blank";
+
         const itemImage = document.createElement('img');
         itemImage.src=imageName;
         
-        itemFigure.append(itemImage);
+        itemLink.append(itemImage);
+        itemFigure.append(itemLink);
         container.append(itemFigure);
     }
 
@@ -518,7 +550,7 @@ export const domManipulator = (function(){
         infoContainer.append(sectionContainer);
     }
     
-    function listRender(listName,container){
+    function listRender(listName,container){ //so that it appends to the appropriate section in the artsy page for easier styling
 
         const listTitle = document.createElement('ul');
         listTitle.className="list-title";
@@ -531,7 +563,7 @@ export const domManipulator = (function(){
             listTitle.appendChild(listItem);
         }
 
-        container.append(listTitle);
+        container.appendChild(listTitle);
     }
 
     return {
