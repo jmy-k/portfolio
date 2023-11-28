@@ -85,8 +85,8 @@ const artsyHMW=["",{content:hmw1,link:hmw1},{content:hmw2,link:hmw2},{content:hm
 const artsyWireflow = ["",{content:wireflow1,link:wireflow1},{content:wireflow2,link:wireflow2},{content:wireflow3,link:wireflow3}]
 const artsyMidfid = ["Mid-Fidelity","Once wireflows were designed I created a mid-fidelity prototype to test how users would carry out the mentioned tasks."]
 const artsyFindings2 = ["More takeaways:","Hamburger menu proved to be useful - 80% of users navigated to it to complete their tasks each time","Success rate in completing tasks were higher because there were multiple ways to complete a task","The 'Movements' section should be more prominent.","Users like Amy who had a smaller budget would use the price sorting filter, while art collectors, like John, used the 'materials' filter - demonstrating the importance of the hierarchy of filters that was prioritized based on earlier research findings."]
-const artsyHiFid=["High-Fidelity","After the second round of usability tests and incorporating findings, I designed a high fidelity prototype to tackle user's additional concerns."]
-
+const artsyHiFid=["High-Fidelity","After the second round of usability tests and incorporating findings, I designed a high fidelity prototype to tackle user's additional concerns. At this point of the project, I would need to incorporate algorithmic content curation, personalization of the “Recommended” features, and also location-specific content curation, which are central to the exploratory nature of the app that I was investigating. The design would be reiterated, testing would be conducted, and so on and so forth. For future development, I would also like to explore the areas of AR and VR for gallery tours, live auctions, and artwork display from within the app."]
+const artsyConclusion = ["More testing can be conducted to gather insights on several ideas:","Is the hamburger menu helpful for users' intended path of exploration? Can it be refined further?","Do these changes diminish the barriers of entry to users like Amy who are younger and more budget conscious?","What information or language can be added or removed that can better inform users of the art they are looking at?","What features can be added that can create a way for art beginners to engage with and learn about art?","How would an onboarding feature affect the efficiency of a user's experience?"]
 
 const dashboard = document.querySelector('#dashboard');
 
@@ -494,6 +494,7 @@ export const domManipulator = (function(){
 
         sectionRender(artsyHiFid);
         const hifidContainer = document.querySelector(".High-Fidelity");
+        listRender(artsyConclusion,hifidContainer);
         const prototypeLink = document.createElement("a");
         hifidContainer.appendChild(prototypeLink);
         prototypeLink.target="_blank";
