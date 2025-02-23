@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", // send styles into DOM
-        "css-loader"], //turn css into js
+          "css-loader"], //turn css into js
       },
       {
         test: /\.(pdf|txt)$/,
@@ -36,7 +36,7 @@ module.exports = {
   },
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "_site"),
+    path: path.resolve(__dirname, ".."),
     assetModuleFilename: "assets/[name][ext]",
   },
 };
